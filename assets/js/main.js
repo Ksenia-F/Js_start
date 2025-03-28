@@ -1,25 +1,32 @@
-let cost = prompt('Напишите стоимость товара');
-let many = prompt('Сколько у вас денежных средств?');
+// Задание 1
+let a = prompt('Введите первое число');
+let b = prompt('Введите второе число');
 
-if ((cost < 0) || (many < 0) || isNaN(cost) || isNaN(many) ) {
-    console.log('Неверный формат ввода');
-} else {
-    if (cost == many) {
-        console.log('Покупка совершена. ');
-    } else if (cost > many) {
-        console.log('До покупки не хватает ' + (cost - many) + 'р.');
-    } else {
-        console.log('Покупка совершена. Сдача' + (many - cost) + 'р.');
+for (let i = a; i <= b; i++) {
+    if (i % 2 === 0) {
+        console.log(i + " ");
     }
 }
 
-let answer = prompt('Введите число');
-if (answer > 0) {
-    alert("1")
-} else if (answer < 0) {
-    alert("-1")
-} else {
-    alert("0")
+// Задание 2
+function min(a, b) {
+    return a < b ? a : b;
 }
+console.log('Наименьшее число ' + min(a,b));
 
-let rezult = (a + b < 4) ? 'Мало' : 'Много';
+// Задание 3
+let styles = ['Джас', 'Блюз'];
+console.log(styles);
+
+styles.push('Рок-н-ролл');
+console.log(styles);
+
+const seredina = Math.floor(styles.length / 2);
+styles[seredina] = 'Классика';
+console.log(styles);
+
+console.log(styles.shift());
+console.log(styles);
+
+styles.unshift('Рэп', 'Регги');
+console.log(styles);
